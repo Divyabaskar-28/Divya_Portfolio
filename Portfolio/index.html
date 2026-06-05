@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya Baskar | Portfolio</title>
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* PARTICLES BACKGROUND */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        /* GLOW BACKGROUND */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: #4f46e5;
+            filter: blur(150px);
+            top: -100px;
+            left: -100px;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background: #06b6d4;
+            filter: blur(120px);
+            bottom: -100px;
+            right: -100px;
+            z-index: -1;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* HEADER */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #38bdf8, #4f46e5);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .typing {
+            font-size: 1.3rem;
+            border-right: 2px solid #38bdf8;
+        }
+
+        /* BUTTONS */
+        .btns a {
+            padding: 10px 20px;
+            margin: 10px;
+            background: linear-gradient(90deg, #4f46e5, #06b6d4);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btns a:hover {
+            transform: scale(1.1);
+        }
+
+        /* SECTION */
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        /* CARD */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        /* PROJECT BUTTON */
+        .project-links a {
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 10px;
+            padding: 6px 12px;
+            background: #38bdf8;
+            color: black;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* CURSOR GLOW */
+        .cursor-glow {
+            position: fixed;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.35), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            transition: transform 0.1s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PARTICLES -->
+    <div id="particles-js"></div>
+    <div class="cursor-glow"></div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <h1 data-aos="fade-down">Divya Baskar</h1>
+        <div class="typing" id="typing"></div><br><br>
+
+        <div class="btns" data-aos="fade-up">
+            <a href="https://github.com/Divyabaskar-28/" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/divyabaskar/" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <section id="about" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>
+            Motivated Computer Science Engineer with experience in full-stack development using Java, ASP.NET, and
+            MySQL.
+            Passionate about building scalable and user-friendly applications.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2 data-aos="fade-up">Technical Skills</h2>
+        <div class="card" data-aos="zoom-in">Java, C, C#, JavaScript</div>
+        <div class="card" data-aos="zoom-in">HTML, CSS, Bootstrap, JSP, Servlets</div>
+        <div class="card" data-aos="zoom-in">Spring Boot, ASP.NET MVC</div>
+        <div class="card" data-aos="zoom-in">MySQL, ADO.NET</div>
+    </section>
+
+    <section id="projects">
+        <h2 data-aos="fade-up">Projects</h2>
+
+        <div class="card" data-aos="fade-right">
+            <h3>Child Vaccination Management System</h3>
+            <p>Automated system for managing vaccination records securely.</p>
+            <div class="project-links">
+                <a href="#">Live Demo</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+
+        <div class="card" data-aos="fade-left">
+            <h3>Automated Access Communication System</h3>
+            <p>Role-based secure communication system.</p>
+            <div class="project-links">
+                <a href="#">Live Demo</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="experience">
+        <h2 data-aos="fade-up">Experience</h2>
+
+        <div class="card" data-aos="flip-left">
+            <h3>Full Stack Developer – Techvolt</h3>
+            <p>Developed applications with authentication, CRUD operations and database integration.</p>
+        </div>
+
+        <div class="card" data-aos="flip-right">
+            <h3>ASP.NET Intern – TriMed</h3>
+            <p>Worked on web forms, validation and backend logic.</p>
+        </div>
+
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Email: dd.divyaamutha@gmail.com</p>
+        <p>Phone: +91 8220619629</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Divya Baskar</p>
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- PARTICLES -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+    <script>
+        const glow = document.querySelector(".cursor-glow");
+
+        document.addEventListener("mousemove", (e) => {
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+        });
+        AOS.init();
+
+        /* typing */
+        const text = ["Full Stack Developer", "Java Developer", "Web Developer"];
+        let i = 0, j = 0, current = "", del = false;
+
+        function type() {
+            current = text[i];
+            document.getElementById("typing").textContent = current.substring(0, j);
+
+            if (!del) { j++; if (j > current.length) { del = true; setTimeout(type, 1000); return; } }
+            else { j--; if (j == 0) { del = false; i = (i + 1) % text.length; } }
+
+            setTimeout(type, del ? 50 : 100);
+        }
+        type();
+
+        /* PARTICLES CONFIG */
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80 },
+                size: { value: 3 },
+                move: { speed: 2 },
+                line_linked: { enable: true },
+                color: { value: "#38bdf8" }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
